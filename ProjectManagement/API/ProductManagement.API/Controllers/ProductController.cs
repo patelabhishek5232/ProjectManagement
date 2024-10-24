@@ -50,13 +50,13 @@ namespace ProductManagement.Controllers
             return Ok(await _productService.UpdateAsync(id, product));
         }
 
-        [HttpDelete("SoftDelete/{id}")]
+        [HttpDelete("softDelete/{id}")]
         public async Task<IActionResult> SoftDeleteAysnc(int id)
         {
             return Ok(await _productService.SoftDelete(id));
         }
 
-        [HttpDelete("HardDelete/{id}")]
+        [HttpDelete("hardDelete/{id}")]
         public async Task<IActionResult> HardDeleteAysnc(int id)
         {
             return Ok(await _productService.DeleteAsync(id));
